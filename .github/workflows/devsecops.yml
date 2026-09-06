@@ -53,10 +53,10 @@ jobs:
         run: |
           docker run --net=host -v $(pwd):/zap/wrk/:rw ghcr.io/zaproxy/zaproxy:stable zap-baseline.py \
             -t http://localhost:5000/search?q=test \
-            -r zap_report.html || true
+            -r zap-report.html || true
 
       - name: Upload DAST Artifact
         uses: actions/upload-artifact@v4
         with:
           name: zap-report
-          path: zap_report.html
+          path: zap-report.html
