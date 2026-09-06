@@ -51,9 +51,7 @@ jobs:
 
       - name: Run OWASP ZAP Container Scan
         run: |
-          docker run --net=host -v $(pwd):/zap/wrk/:rw ghcr.io/zaproxy/zaproxy:stable zap-baseline.py \
-            -t http://localhost:5000/search?q=test \
-            -r zap-report.html || true
+          docker run --net=host -v $(pwd):/zap/wrk/:rw ghcr.io/zaproxy/zaproxy:stable zap-baseline.py -t http://localhost:5000/search?q=test -r zap-report.html || true
 
       - name: Upload DAST Artifact
         uses: actions/upload-artifact@v4
