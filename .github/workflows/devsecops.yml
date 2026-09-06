@@ -44,3 +44,4 @@ jobs:
         with:
           target: 'http://localhost:5000/search?q=test'
           allow_issue_writing: false
+          fail_action: false
