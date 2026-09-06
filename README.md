@@ -5,6 +5,9 @@
 ![DAST](https://img.shields.io/badge/DAST-OWASP_ZAP-orange)
 
 ## Overview
+
+![PipelineSuccess](pipeline_success.png)
+
 This repository demonstrates an enterprise-grade **DevSecOps pipeline** built using **GitHub Actions**, integrating automated **Static Application Security Testing (SAST)** with **Semgrep** and **Dynamic Application Security Testing (DAST)** with **OWASP ZAP**. 
 
 The pipeline automatically scans a Python/Flask target application on every push and pull request, identifying security risks early in the Software Development Life Cycle (SDLC) while outputting downloadable vulnerability reports as build artifacts.
